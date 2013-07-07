@@ -15,7 +15,7 @@
 #define Stewitter_H
 
 #include <Arduino.h>
-#include <Ethernet.h>
+#include <EthernetClient.h>
 
 class Stewitter
 {

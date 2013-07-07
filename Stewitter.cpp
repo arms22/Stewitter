@@ -13,9 +13,9 @@
 
 #include "Stewitter.h"
 
-#define STEWGATE_POST_API			"/sg1/post/"
-#define STEWGATE_LAST_MENTION_API	"/sg1/last_mention/"
-#define STEWGATE_HOST				"stewgate.appspot.com"
+#define STEWGATE_POST_API			"/api/post/"
+#define STEWGATE_LAST_MENTION_API	"/api/last_mention/"
+#define STEWGATE_HOST				"stewgate-u.appspot.com"
 
 Stewitter::Stewitter(const char *token) : client(), token(token)
 {
