@@ -17,7 +17,7 @@
 #define STEWGATE_LAST_MENTION_API	"/api/last_mention/"
 #define STEWGATE_HOST				"stewgate-u.appspot.com"
 
-Stewitter::Stewitter(const char *token) : client(), token(token)
+Stewitter::Stewitter(const char *token, Client &client) : client(client), token(token)
 {
     httpBody.reserve(100);
 }

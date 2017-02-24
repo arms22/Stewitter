@@ -15,24 +15,24 @@
 #define Stewitter_H
 
 #include <Arduino.h>
-#include <EthernetClient.h>
+#include <Client.h>
 
 class Stewitter
 {
 private:
-	EthernetClient client;
-    String httpBody;
+	Client &client;
+  String httpBody;
 	const char *token;
 	int statusCode;
 	uint8_t parseStatus;
 public:
-	Stewitter(const char *token);
+  Stewitter(const char *token, Client &client);
 	bool post(const char *msg);
-    bool lastMention(void);
+  bool lastMention(void);
 	bool checkStatus(Print *debug = NULL);
-	int  wait(Print *debug = NULL);
-	int  status(void) { return statusCode; }
-    String& response(void) { return httpBody; }
+	int wait(Print *debug = NULL);
+	int status(void) { return statusCode; }
+  String& response(void) { return httpBody; }
 };
 
 #endif	//Stewitter_H

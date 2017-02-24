@@ -11,7 +11,8 @@
 byte mac[] = { 
   0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
 
-Stewitter twitter("YourToken");
+EthernetClient client;
+Stewitter twitter("YourToken",client);
 
 char msg[140+1] = "";
 int len = 0;
